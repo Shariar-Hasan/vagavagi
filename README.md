@@ -5,29 +5,12 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4+-38B2AC?style=for-the-badge&logo=tailwind-css)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 **A modern, intuitive Bengali-language expense splitting application**
 
-[Live Demo](#) • [Report Bug](https://github.com/Shariar-Hasan/vagavagi/issues) • [Request Feature](https://github.com/Shariar-Hasan/vagavagi/issues)
+[Live Demo](https://vagavagi.vercel.app) • [Report Bug](https://github.com/Shariar-Hasan/vagavagi/issues) • [Request Feature](https://github.com/Shariar-Hasan/vagavagi/issues)
 
 </div>
-
----
-
-## 📖 Table of Contents
-
-- [About](#-about)
-- [Features](#-features)
-- [Screenshots](#-screenshots)
-- [Getting Started](#-getting-started)
-- [How to Use](#-how-to-use)
-- [Technology Stack](#-technology-stack)
-- [Project Structure](#-project-structure)
-- [Use Cases](#-use-cases)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Author](#-author)
 
 ---
 
@@ -38,7 +21,7 @@
 ### Why Vagavagi?
 
 - ✅ **No Sign-up Required** - Start using immediately
-- ✅ **100% Free & Open Source** - No hidden costs
+- ✅ **100% Free** - No hidden costs
 - ✅ **Privacy First** - All data stays in your browser
 - ✅ **Bengali Language** - Full Bengali interface for ease of use
 - ✅ **Mobile Friendly** - Works perfectly on all devices
@@ -95,14 +78,14 @@
 ## 📸 Screenshots
 
 ### Light Mode
-```
-Coming soon...
-```
+
+![light mode](/public/light-mode.png)
+
 
 ### Dark Mode
-```
-Coming soon...
-```
+
+![dark mode](/public/dark-mode.png)
+
 
 ---
 
@@ -239,52 +222,6 @@ The optimized production build will be created in the `.next` folder.
 
 ---
 
-## 📁 Project Structure
-
-```
-vagavagi/
-│
-├── app/                          # Next.js App Router
-│   ├── layout.tsx               # Root layout with metadata & theme script
-│   ├── page.tsx                 # Main page with state management
-│   ├── globals.css              # Global styles & animations
-│   └── fonts/                   # Custom fonts (Kalpurush)
-│
-├── components/                   # React components
-│   ├── ItemEntry.tsx            # Item CRUD interface
-│   ├── ParticipantEntry.tsx     # Participant management
-│   ├── Summary.tsx              # Calculation & settlement display
-│   ├── ThemeToggle.tsx          # Dark/light mode toggle
-│   └── ui/                      # ShadCN/ui components
-│       ├── button.tsx
-│       ├── card.tsx
-│       ├── input.tsx
-│       ├── table.tsx
-│       ├── dialog.tsx
-│       ├── alert.tsx
-│       └── badge.tsx
-│
-├── lib/                         # Utility functions
-│   ├── calculations.ts          # Settlement algorithm & calculations
-│   ├── storage.ts               # LocalStorage helpers
-│   ├── pdf-export.ts            # PDF generation logic
-│   └── utils.ts                 # General utilities (cn function)
-│
-├── types/                       # TypeScript definitions
-│   └── index.ts                 # Item, Participant, CalculationResult types
-│
-├── public/                      # Static assets
-│   └── fonts/                   # Font files
-│
-├── package.json                 # Dependencies & scripts
-├── tsconfig.json                # TypeScript configuration
-├── tailwind.config.ts           # Tailwind CSS configuration
-├── next.config.ts               # Next.js configuration
-└── README.md                    # This file
-```
-
----
-
 ## 💡 Use Cases
 
 This app is perfect for various scenarios:
@@ -321,27 +258,6 @@ This app is perfect for various scenarios:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are what make the open-source community amazing! Any contributions you make are **greatly appreciated**.
-
-### How to Contribute
-
-1. **Fork the Project**
-2. **Create your Feature Branch**
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. **Commit your Changes**
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. **Push to the Branch**
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. **Open a Pull Request**
-
 ### Development Guidelines
 
 - Follow TypeScript best practices
@@ -352,10 +268,6 @@ Contributions are what make the open-source community amazing! Any contributions
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
 **TL;DR:** You can use this project for any purpose, including commercial projects, as long as you include the original copyright notice.
 
 ---
@@ -365,7 +277,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Shariar Hasan**
 
 - GitHub: [@Shariar-Hasan](https://github.com/Shariar-Hasan)
-- Email: [your-email@example.com](mailto:your-email@example.com)
+- Email: [shahriar.hasan.1523@gmail.com](mailto:shahriar.hasan.1523@gmail.com)
 
 ---
 
