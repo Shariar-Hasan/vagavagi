@@ -1,36 +1,390 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧮 ভাগাভাগি (Vagavagi)
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4+-38B2AC?style=for-the-badge&logo=tailwind-css)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**A modern, intuitive Bengali-language expense splitting application**
+
+[Live Demo](#) • [Report Bug](https://github.com/Shariar-Hasan/vagavagi/issues) • [Request Feature](https://github.com/Shariar-Hasan/vagavagi/issues)
+
+</div>
+
+---
+
+## 📖 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Getting Started](#-getting-started)
+- [How to Use](#-how-to-use)
+- [Technology Stack](#-technology-stack)
+- [Project Structure](#-project-structure)
+- [Use Cases](#-use-cases)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
+
+---
+
+## 🌟 About
+
+**ভাগাভাগি (Vagavagi)** is a single-page Next.js application designed to make splitting shared expenses effortless. Whether you're dining out with friends, planning a trip, or managing household expenses with roommates, this app calculates exactly who owes what and provides clear settlement instructions.
+
+### Why Vagavagi?
+
+- ✅ **No Sign-up Required** - Start using immediately
+- ✅ **100% Free & Open Source** - No hidden costs
+- ✅ **Privacy First** - All data stays in your browser
+- ✅ **Bengali Language** - Full Bengali interface for ease of use
+- ✅ **Mobile Friendly** - Works perfectly on all devices
+- ✅ **Dark Mode** - Beautiful dark theme for night-time use
+
+---
+
+## ✨ Features
+
+### 🛍️ **Item Management**
+- Add unlimited items with name, unit price, and quantity
+- Edit or delete items anytime
+- Real-time total calculation
+- Input validation to prevent errors
+
+### 👥 **Participant Tracking**
+- Add multiple participants with their paid amounts
+- Track individual consumption for each item
+- Smart validation prevents over-allocation
+- Easy edit with auto-scroll functionality
+
+### 🧮 **Smart Calculations**
+- Automatic balance calculation for each participant
+- Optimized settlement algorithm minimizes transactions
+- Clear "who pays whom" instructions
+- Color-coded status indicators (green for receiving, red for paying)
+
+### 📄 **PDF Export**
+- Professional PDF reports with complete details
+- Includes all items, participants, and settlements
+- Properly formatted tables with aligned data
+- Ready to share or print
+
+### 💾 **Data Persistence**
+- Automatic save to browser's LocalStorage
+- Data survives page refreshes
+- One-click clear all data option
+
+### 🎨 **Modern UI/UX**
+- Glassmorphism design with backdrop blur effects
+- Animated gradient backgrounds
+- Smooth transitions and hover effects
+- Responsive grid layouts for all screen sizes
+- Cookie-based theme persistence (faster loading)
+
+### 🌙 **Enhanced Dark Mode**
+- Rich, deep color palette
+- Excellent contrast for readability
+- Glowing animated backgrounds
+- Custom scrollbar styling
+
+---
+
+## 📸 Screenshots
+
+### Light Mode
+```
+Coming soon...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Dark Mode
+```
+Coming soon...
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+Before you begin, ensure you have the following installed:
+- **Node.js** 18.0 or higher
+- **npm** (comes with Node.js) or **yarn** or **pnpm**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Shariar-Hasan/vagavagi.git
+   cd vagavagi
+   ```
 
-## Deploy on Vercel
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the app in action!
+
+### Building for Production
+
+```bash
+# Build the application
+npm run build
+
+# Start the production server
+npm start
+```
+
+The optimized production build will be created in the `.next` folder.
+
+---
+
+## 📱 How to Use
+
+### Step 1: Add Items 🛍️
+
+1. Enter the item name (e.g., "চা", "বিস্কুট", "পেট্রোল")
+2. Enter the unit price in Taka (৳)
+3. Enter the total quantity available
+4. Click **"+ যোগ করুন"** to add
+5. Items appear in a table where you can edit or delete them
+
+**Example:**
+- Item: চা (Tea)
+- Unit Price: ৳15
+- Quantity: 10 cups
+
+### Step 2: Add Participants 👥
+
+1. Enter participant's name
+2. Enter the amount they paid (৳)
+3. For each item, specify how many units they consumed
+4. Click **"+ যোগ করুন"** to add
+5. Click **"✓ আপডেট করুন"** when editing
+
+**Example:**
+- Name: রহিম
+- Amount Paid: ৳200
+- চা consumed: 3 cups
+
+### Step 3: Calculate Settlement 🧮
+
+1. Click **"🧮 ক্যালকুলেট করুন"** to calculate balances
+2. View the summary table showing:
+   - Total owed by each person
+   - Amount paid by each person
+   - Balance (positive = will receive, negative = needs to pay)
+3. Read the **"সেটেলমেন্ট নির্দেশনা"** section for exact payment instructions
+
+### Step 4: Export PDF 📄
+
+1. After calculating, click **"📄 PDF ডাউনলোড করুন"**
+2. A professional PDF report will be downloaded
+3. Share it with your group or keep it for records
+
+### Step 5: Clear Data (Optional) 🗑️
+
+- Click **"🗑️ সব ডেটা মুছুন"** to reset everything
+- Confirm the action in the dialog
+- All items and participants will be removed
+
+---
+
+## 🛠️ Technology Stack
+
+### Core Technologies
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Next.js** | 15+ | React framework with App Router |
+| **TypeScript** | 5+ | Type-safe JavaScript |
+| **React** | 18+ | UI library |
+| **Tailwind CSS** | 4+ | Utility-first CSS framework |
+
+### UI & Components
+
+| Library | Purpose |
+|---------|---------|
+| **ShadCN/ui** | Pre-built accessible components |
+| **Radix UI** | Headless UI primitives |
+| **Lucide Icons** | Icon library |
+
+### Additional Libraries
+
+| Library | Purpose |
+|---------|---------|
+| **jsPDF** | PDF generation |
+| **jsPDF-AutoTable** | PDF table formatting |
+| **LocalStorage API** | Browser data persistence |
+| **Cookies** | Theme persistence |
+
+---
+
+## 📁 Project Structure
+
+```
+vagavagi/
+│
+├── app/                          # Next.js App Router
+│   ├── layout.tsx               # Root layout with metadata & theme script
+│   ├── page.tsx                 # Main page with state management
+│   ├── globals.css              # Global styles & animations
+│   └── fonts/                   # Custom fonts (Kalpurush)
+│
+├── components/                   # React components
+│   ├── ItemEntry.tsx            # Item CRUD interface
+│   ├── ParticipantEntry.tsx     # Participant management
+│   ├── Summary.tsx              # Calculation & settlement display
+│   ├── ThemeToggle.tsx          # Dark/light mode toggle
+│   └── ui/                      # ShadCN/ui components
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── input.tsx
+│       ├── table.tsx
+│       ├── dialog.tsx
+│       ├── alert.tsx
+│       └── badge.tsx
+│
+├── lib/                         # Utility functions
+│   ├── calculations.ts          # Settlement algorithm & calculations
+│   ├── storage.ts               # LocalStorage helpers
+│   ├── pdf-export.ts            # PDF generation logic
+│   └── utils.ts                 # General utilities (cn function)
+│
+├── types/                       # TypeScript definitions
+│   └── index.ts                 # Item, Participant, CalculationResult types
+│
+├── public/                      # Static assets
+│   └── fonts/                   # Font files
+│
+├── package.json                 # Dependencies & scripts
+├── tsconfig.json                # TypeScript configuration
+├── tailwind.config.ts           # Tailwind CSS configuration
+├── next.config.ts               # Next.js configuration
+└── README.md                    # This file
+```
+
+---
+
+## 💡 Use Cases
+
+This app is perfect for various scenarios:
+
+### 🍕 **Social & Dining**
+- Splitting restaurant bills among friends
+- Sharing food delivery costs
+- Dividing party expenses
+- Coffee shop runs with colleagues
+
+### 🚗 **Travel & Transportation**
+- Road trip expense sharing (fuel, tolls, parking)
+- Hotel room splitting
+- Group tour cost division
+- Uber/taxi fare sharing
+
+### 🏠 **Living Arrangements**
+- Roommate expense tracking
+- Household grocery bills
+- Utility bill splitting
+- Shared subscription costs (Netflix, Spotify, etc.)
+
+### 💼 **Work & Business**
+- Office supply cost division
+- Team lunch expenses
+- Conference/workshop cost sharing
+- Client entertainment expenses
+
+### 🎁 **Events & Celebrations**
+- Group gift contributions
+- Wedding/birthday party expenses
+- Anniversary celebration costs
+- Holiday trip planning
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community amazing! Any contributions you make are **greatly appreciated**.
+
+### How to Contribute
+
+1. **Fork the Project**
+2. **Create your Feature Branch**
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit your Changes**
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. **Push to the Branch**
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Open a Pull Request**
+
+### Development Guidelines
+
+- Follow TypeScript best practices
+- Use Tailwind CSS for styling
+- Maintain Bengali language consistency
+- Write clean, commented code
+- Test thoroughly before submitting
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+**TL;DR:** You can use this project for any purpose, including commercial projects, as long as you include the original copyright notice.
+
+---
+
+## 👨‍💻 Author
+
+**Shariar Hasan**
+
+- GitHub: [@Shariar-Hasan](https://github.com/Shariar-Hasan)
+- Email: [your-email@example.com](mailto:your-email@example.com)
+
+---
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) - The React framework
+- [ShadCN/ui](https://ui.shadcn.com/) - Beautiful component library
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
+- [jsPDF](https://github.com/parallax/jsPDF) - PDF generation
+- [Vercel](https://vercel.com/) - Deployment platform
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, please give it a ⭐ on GitHub!
+
+<div align="center">
+
+**Made with ❤️ and ☕ by [Shariar Hasan](https://github.com/Shariar-Hasan)**
+
+</div>
